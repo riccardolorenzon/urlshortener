@@ -1,0 +1,14 @@
+{% load i18n %}
+<html>
+<body>
+<h1>URL shortener</h1>
+<form action="/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+{% if url != None %}
+    <a href="{{ url }}">{{ url }}</a>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+It's not clear if the match must be on the WHOLE word or in part of it.
+In the example provided it's stated 'lawsuit' is a good match so it looks like the first assumption is true.
+Anyway i replace the code snippet to handle the second case.
+    [..]
+    while words.count() != 0 and not found_word:
+        #check if any of the token contains the first word by each char
+        current_word = words[index].word_text
+        index = 0
+        token_found = True
+        while token_found and index < len(current_word):
+            token_found = False
+            for token in url_tokens:
+                if current_word[:index + 1] in token:
+                    token_found = True
+            if token_found:
+                index += 1
+        if index == len(current_word) and current_word.url == None:
+            #current_word is ok
+            found_word = True
+            result = current_word
+        else:
+            #update the words exluding all words containg w
+            words = words.exclude(word_text__contains = current_word[:index + 1])
+    [..]
+
