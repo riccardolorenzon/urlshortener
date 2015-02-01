@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from urlshortener_app.models import Word
 import datetime
@@ -10,11 +10,6 @@ from urlparse import urljoin
 from django.http import Http404
 
 def get_shorter_word(url):
-    '''
-    return the word to be associated with the current HOST to replace the long url provided
-    :param url:
-    :return:
-    '''
     original_url = url
     #remove http or https prefix if present
     if '//' in url:
