@@ -6,8 +6,16 @@ A Django application that adds an URL shortener to your site similar to bit.ly p
 Installation
 ------------
 
+If you are inside a virtual environment, activate it before installing Django:
+    sourc <your env dir>/bin/activate
+
 You need to install the following prerequisites in order to use this app:
 
     pip install django
+    pip install python-dateutil
 
-After Django install, open the urlshortener directory inside a command shell and type
+Run development server using the following command:
+    python manage.py runserver 8000
+
+Open in your browser the dev server url:
+    http://127.0.0.1:8000/
