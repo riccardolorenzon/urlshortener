@@ -25,5 +25,3 @@ Run development server using the following command(in the directory ./urlshorten
 Open in your browser the dev server url:
 
     http://127.0.0.1:8000/
-
-If you want to clone it from github
