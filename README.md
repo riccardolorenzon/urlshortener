@@ -19,3 +19,4 @@ Run development server using the following command:
 
 Open in your browser the dev server url:
     http://127.0.0.1:8000/
+
